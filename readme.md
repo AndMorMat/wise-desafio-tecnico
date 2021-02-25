@@ -29,6 +29,8 @@ Iniciar server
 ```
 npm start
 ```  
+## Resultado  
+![alt text](https://raw.githubusercontent.com/AndMorMat/wise-desafio-tecnico/master/assets/images/result.jpeg?raw=true)
 
 ## Contato
 
