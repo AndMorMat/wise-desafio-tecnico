@@ -7,7 +7,11 @@ Criar uma aplicação de login, ou seja, acesso de um usuário. O funcionamento 
 
 ## Instalação
 
-Clonar repositório.  
+Clonar repositório
+```
+git clone git@github.com:AndMorMat/wise-desafio-tecnico.git
+```  
+
 Instalar dependências:
 ```
 npm install
