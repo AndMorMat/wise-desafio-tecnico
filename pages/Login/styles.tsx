@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   	paddingLeft: 28,
   	paddingRight: 28,
-  	marginTop: '20%'
+  	marginTop: '30%'
   },
   buttonLoginBoxTablet: {
   	backgroundColor: 'rgba(255, 255, 255, 0)',
