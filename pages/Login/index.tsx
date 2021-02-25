@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import {ImageBackground, TouchableOpacity} from 'react-native';
+import {ImageBackground, TouchableOpacity, Alert} from 'react-native';
 import { Text, View } from '../../components/Themed';
 import {TextInputBox} from '../../components/TextInputBox';
 import GradientButton from 'react-native-gradient-buttons';
@@ -26,16 +26,26 @@ export default function LoginScreen() {
         setMailError('');
         if(testMail(user)) {
             setMailError('Necessário um e-mail válido');
+            return;
         }
 
         setPassError('');
         if(!pass) {
             setPassError('Necessário digitar uma senha');
+            return;
         }
 
         axios.get('https://6035b2616496b9001749f32d.mockapi.io/api/v1/login', params)
             .then(res => {
                 if(res.data.success == 1){
+                    Alert.alert(
+                          "Sucesso",
+                          "Login realizado com sucesso",
+                          [
+                            { text: "OK", onPress: () => {} }
+                          ]
+                        );
+
                     dispatch({type: 'login', payload: res.data.user})
                 }
 
